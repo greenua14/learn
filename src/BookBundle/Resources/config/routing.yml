@@ -5,3 +5,7 @@ index:
 user:
     path:       /user
     defaults:   { _controller: BookBundle:Index:user }
+
+admin:
+    path:       /admin
+    defaults:   { _controller: BookBundle:Index:admin }

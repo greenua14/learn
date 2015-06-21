@@ -26,4 +26,14 @@ class IndexController extends Controller
            'message' => 'test user access to role ROLE_USER!'
        );
     }
+
+    /**
+     * @Template()
+     */
+    public function adminAction()
+    {
+        return array(
+            'message' => 'test admin access to role ROLE_ADMIN!'
+        );
+    }
 } 
