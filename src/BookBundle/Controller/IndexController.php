@@ -16,4 +16,24 @@ class IndexController extends Controller
             'word' => 'HELLOOOOOO!'
         );
     }
+
+    /**
+     * @Template()
+     */
+    public function userAction()
+    {
+       return array(
+           'message' => 'test user access to role ROLE_USER!'
+       );
+    }
+
+    /**
+     * @Template()
+     */
+    public function adminAction()
+    {
+        return array(
+            'message' => 'test admin access to role ROLE_ADMIN!'
+        );
+    }
 } 
