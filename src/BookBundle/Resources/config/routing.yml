@@ -9,3 +9,15 @@ user:
 admin:
     path:       /admin
     defaults:   { _controller: BookBundle:Index:admin }
+
+register:
+    path:       /register
+    defaults:   { _controller: BookBundle:Security:register }
+
+create:
+    path:       /register/create
+    defaults:   { _controller: BookBundle:Security:create }
+
+login:
+    path:       /login
+    defaults:   { _controller: BookBundle:Security:login }

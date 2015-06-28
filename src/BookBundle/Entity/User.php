@@ -39,7 +39,7 @@ class User implements UserInterface, \Serializable
     private $email;
 
     /**
-     * @ORM\Column(name="logged", type="datetime")
+     * @ORM\Column(name="logged", type="datetime", nullable=true)
      */
     private $logged;
 
@@ -47,6 +47,11 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(name="is_active", type="boolean")
      */
     private $isActive;
+
+    /**
+     * @ORM\Column(name="roles", type="string")
+     */
+    private $roles;
 
     function __construct()
     {
@@ -96,6 +101,14 @@ class User implements UserInterface, \Serializable
     public function getLogged()
     {
         return $this->logged;
+    }
+
+    /**
+     * @param mixed $roles
+     */
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
     }
 
     /**

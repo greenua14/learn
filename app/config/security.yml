@@ -1,7 +1,18 @@
 security:
+    encoders:
+        BookBundle\Entity\User:   bcrypt
+
+    role_hierarchy:
+        ROLE_USER:    ROLE_USER
+        ROLE_ADMIN:   [ROLE_USER, ROLE_ADMIN]
+
     providers:
-        in_memory:
-            memory: ~
+#        in_memory:
+#            memory: ~
+        my_db_provider:
+            entity:
+                class:      BookBundle:User
+                property:   username
 
     firewalls:
         dev:
@@ -9,4 +20,7 @@ security:
             security: false
 
         default:
-            anonymous: ~
+            pattern:    ^/
+            http_basic: ~
+            anonymous:  ~
+            provider:   my_db_provider
