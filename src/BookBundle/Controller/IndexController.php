@@ -4,6 +4,7 @@ namespace BookBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class IndexController extends Controller
 {
@@ -19,6 +20,7 @@ class IndexController extends Controller
 
     /**
      * @Template()
+     * @Security("has_role('ROLE_USER')")
      */
     public function userAction()
     {
@@ -29,6 +31,7 @@ class IndexController extends Controller
 
     /**
      * @Template()
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function adminAction()
     {

@@ -21,3 +21,7 @@ create:
 login:
     path:       /login
     defaults:   { _controller: BookBundle:Security:login }
+
+login_check:
+    path:       /login/check
+    defaults:   { _controller: BookBundle:Security:loginCheck }

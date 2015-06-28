@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use BookBundle\Entity\User;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class SecurityController extends Controller
 {
@@ -67,5 +68,10 @@ class SecurityController extends Controller
     public function loginAction()
     {
         return [];
+    }
+
+    public function loginCheckAction()
+    {
+        return new Response('Check login');
     }
 } 
