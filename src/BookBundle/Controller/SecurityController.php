@@ -52,6 +52,13 @@ class SecurityController extends Controller
 
             return $this->redirect($url);
         }
+
+        return $this->render(
+            'BookBundle:Security:register.html.twig',
+            array(
+                'form' => $form->createView()
+            )
+        );
     }
 
     /**
