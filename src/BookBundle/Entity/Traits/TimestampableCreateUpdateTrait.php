@@ -8,13 +8,13 @@ use Gedmo\Mapping\Annotation as Gedmo;
 class TimestampableCreateUpdateTrait
 {
     /**
-     * @Gedmo\Timestampable(on="created")
+     * @Gedmo\Timestampable(on="create")
      * @ORM\Column(name="created", type="datetime")
      */
     private $created;
 
     /**
-     * @Gedmo\Timestampable(on="updated")
+     * @Gedmo\Timestampable(on="update")
      * @ORM\Column(name="updated", type="datetime")
      */
     private $updated;
